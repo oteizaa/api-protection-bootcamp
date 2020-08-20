@@ -174,14 +174,6 @@ resource "azurerm_network_interface" "vm01-ext-nic" {
     private_ip_address            = var.f5publicvip
     public_ip_address_id          = azurerm_public_ip.pubvippip.id
   }
-
-  ip_configuration {
-    name                          = "secondary3"
-    subnet_id                     = azurerm_subnet.External.id
-    private_ip_address_allocation = "Static"
-    private_ip_address            = var.f5publicvip2
-    public_ip_address_id          = azurerm_public_ip.pubvippip.id
-  }
   
   tags = {
     Name                      = "${var.environment}-vm01-ext-int"
@@ -247,7 +239,6 @@ data "template_file" "as3_json" {
     client_secret   = var.sp_client_secret
     backendvm_ip    = var.backend01ext
     publicvip       = var.f5publicvip
-    publicvip2      = var.f5publicvip2
     privatevip      = var.f5privatevip
   }
 }
