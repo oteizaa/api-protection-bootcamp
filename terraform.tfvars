@@ -10,4 +10,4 @@ sp_tenant_id       = ""
 location           = "westus2"
 
 # Prefix for objects being created
-prefix = "apiprotection123"
+prefix = "apiprot123"
