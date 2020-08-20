@@ -32,7 +32,6 @@ variable f5vm01mgmt { default = "10.90.1.4" }
 variable f5vm01ext { default = "10.90.2.4" }
 variable f5privatevip { default = "10.90.2.11" }
 variable f5publicvip { default = "10.90.2.12" }
-variable f5publicvip2 { default = "10.90.2.13" }
 variable backend01ext { default = "10.90.2.101" }
 variable mgmt_gw { default = "10.90.1.1" }
 variable ext_gw { default = "10.90.2.1" }
